@@ -2,11 +2,13 @@
 
 from flask import Flask
 from flask_migrate import Migrate
-
 from models import db
+from faker import Faker
+
 
 # create a Flask application instance 
 app = Flask(__name__)
+faker=Faker()
 
 # configure the database connection to the local file app.db
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
